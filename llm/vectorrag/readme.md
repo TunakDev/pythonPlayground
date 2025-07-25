@@ -1,0 +1,1 @@
+Guide for vetorrag with chroma and ollama: https://www.youtube.com/watch?v=E4l91XKQSgw

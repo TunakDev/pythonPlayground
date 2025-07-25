@@ -1,0 +1,11 @@
+id,name,parent_name
+1,Smeltery,
+2,Blast Furnace,Smeltery
+3,Cast,Smeltery
+4,Cauldron,Blast Furnace
+5,Heater,Blast Furnace
+6,Heating Element,Heater
+7,Crusher,
+8,Conveyor Belt,Crusher
+9,Crushing Mechanism,Crusher
+10,Crushing Plates,Crushing Mechanism

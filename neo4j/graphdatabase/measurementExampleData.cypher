@@ -1,0 +1,73 @@
+CREATE
+(smeltery:FACTORY{name:"Smeltery"}),
+
+(blastFurnace:MACHINE{name:"Blast Furnace"}),
+(cauldron:MODULE{name:"Cauldron"}),
+(drain:MODULE{name:"Drain"}),
+(drainSensor:SENSOR{name:"Drain Sensor", isCurrentlyBlocked:False}),
+(drainMeasurement1:MEASUREMENT{isCurrentlyBlocked:False, timestamp:"25-03-2025-05:55:25"}),
+(drainMeasurement2:MEASUREMENT{isCurrentlyBlocked:False, timestamp:"25-03-2025-06:15:32"}),
+(drainMeasurement3:MEASUREMENT{isCurrentlyBlocked:False, timestamp:"25-03-2025-06:35:56"}),
+(drainMeasurement4:MEASUREMENT{isCurrentlyBlocked:False, timestamp:"25-03-2025-06:59:22"}),
+(drainMeasurement5:MEASUREMENT{isCurrentlyBlocked:False, timestamp:"25-03-2025-07:22:10"}),
+
+(cauldronSensor:SENSOR{name:"Cauldron Sensor", currentTempCelsius:844, tilt:1}),
+(cauldronMeasurement1:MEASUREMENT{degreesCelsius:650, tilt:0, timestamp:"25-03-2025-05:55:24"}),
+(cauldronMeasurement2:MEASUREMENT{degreesCelsius:700, tilt:0, timestamp:"25-03-2025-06:15:31"}),
+(cauldronMeasurement3:MEASUREMENT{degreesCelsius:740, tilt:1, timestamp:"25-03-2025-06:35:55"}),
+(cauldronMeasurement4:MEASUREMENT{degreesCelsius:790, tilt:0, timestamp:"25-03-2025-06:59:21"}),
+(cauldronMeasurement5:MEASUREMENT{degreesCelsius:843, tilt:1, timestamp:"25-03-2025-07:22:09"}),
+
+(heater:MODULE{name:"Heater"}),
+(heatingElement:MODULE{name:"Heating Element"}),
+(heaterSensor:SENSOR{name:"Heater Sensor", currentTempCelsius:900, targetTemperatureCelsius:1000}),
+(heaterMeasurement1:MEASUREMENT{degreesCelsius:700, timestamp:"25-03-2025-05:55:00"}),
+(heaterMeasurement2:MEASUREMENT{degreesCelsius:750, timestamp:"25-03-2025-06:15:00"}),
+(heaterMeasurement3:MEASUREMENT{degreesCelsius:800, timestamp:"25-03-2025-06:35:00"}),
+(heaterMeasurement4:MEASUREMENT{degreesCelsius:850, timestamp:"25-03-2025-06:59:00"}),
+(heaterMeasurement5:MEASUREMENT{degreesCelsius:900, timestamp:"25-03-2025-07:21:00"}),
+
+(cast:MACHINE{name:"Cast"}),
+(castSensor:SENSOR{name:"Cast Sensor", currentFillStatus:0, currentTempCelsius:150}),
+(castMeasurement1:MEASUREMENT{currentFilLStatus:0, currentTempCelsius:250, timestamp:"25-03-2025-05:55:10"}),
+(castMeasurement2:MEASUREMENT{currentFilLStatus:0, currentTempCelsius:190, timestamp:"25-03-2025-06:15:10"}),
+(castMeasurement3:MEASUREMENT{currentFilLStatus:0, currentTempCelsius:170, timestamp:"25-03-2025-06:35:10"}),
+(castMeasurement4:MEASUREMENT{currentFilLStatus:0, currentTempCelsius:150, timestamp:"25-03-2025-06:59:10"}),
+(castMeasurement5:MEASUREMENT{currentFilLStatus:0, currentTempCelsius:140, timestamp:"25-03-2025-07:21:10"}),
+
+(smeltery)-[:HAS_MACHINE]->(blastFurnace),
+(smeltery)-[:HAS_MACHINE]->(cast),
+
+(blastFurnace)-[:HAS_MODULE]->(cauldron),
+(cauldron)-[:HAS_MODULE]->(drain),
+(blastFurnace)-[:HAS_MODULE]->(heater),
+(heater)-[:HAS_MODULE]->(heatingElement),
+
+(drain)-[:HAS_SENSOR]->(drainSensor),
+(cauldron)-[:HAS_SENSOR]->(cauldronSensor),
+(heatingElement)-[:HAS_SENSOR]->(heaterSensor),
+(cast)-[:HAS_SENSOR]->(castSensor),
+
+(cauldronSensor)-[:MEASURED]->(cauldronMeasurement1),
+(cauldronSensor)-[:MEASURED]->(cauldronMeasurement2),
+(cauldronSensor)-[:MEASURED]->(cauldronMeasurement3),
+(cauldronSensor)-[:MEASURED]->(cauldronMeasurement4),
+(cauldronSensor)-[:MEASURED]->(cauldronMeasurement5),
+
+(castSensor)-[:MEASURED]->(castMeasurement1),
+(castSensor)-[:MEASURED]->(castMeasurement2),
+(castSensor)-[:MEASURED]->(castMeasurement3),
+(castSensor)-[:MEASURED]->(castMeasurement4),
+(castSensor)-[:MEASURED]->(castMeasurement5),
+
+(drainSensor)-[:MEASURED]->(drainMeasurement1),
+(drainSensor)-[:MEASURED]->(drainMeasurement2),
+(drainSensor)-[:MEASURED]->(drainMeasurement3),
+(drainSensor)-[:MEASURED]->(drainMeasurement4),
+(drainSensor)-[:MEASURED]->(drainMeasurement5),
+
+(heaterSensor)-[:MEASURED]->(heaterMeasurement1),
+(heaterSensor)-[:MEASURED]->(heaterMeasurement2),
+(heaterSensor)-[:MEASURED]->(heaterMeasurement3),
+(heaterSensor)-[:MEASURED]->(heaterMeasurement4),
+(heaterSensor)-[:MEASURED]->(heaterMeasurement5);

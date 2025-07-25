@@ -1,0 +1,6 @@
+id,name,parent_name
+1,Cauldron Sensor,Cauldron
+2,Heater Sensor,Heating Element
+3,Cast Sensor,Cast
+4,Conveyor Belt Sensor,Conveyor Belt
+5,Crushing Plates Sensor,Crushing Plates

@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <py-config>
+      packages = ["matplotlib", "pandas"]
+    </py-config>
+
+    <style>
+        .button:hover {
+            background: #d9d9d9;
+            }
+        .button {
+            text-decoration: none;
+            display: inline;
+            padding: 5px;
+            width: 120px;
+            font-size: 1em;
+            background: #afc7b5;
+            color: darkgreen;
+            font-weight: bold;
+            }
+    </style>
+
+    <script type="module">
+            const loading = document.getElementById('loading');
+            addEventListener('py:ready', () => loading.close());
+            loading.showModal();
+    </script>
+
+</head>
+
+<body>
+    <dialog id="loading">
+        <h1>Loading...</h1>
+    </dialog>
+
+    <h1>Matplotlib</h1>
+    <div hidden id="evtMsg">0</div>
+
+    <py-script> print("My Lineplot")</py-script>
+    <div id="lineplot"></div>
+    <button id="plot-button" onClick="document.getElementById('evtMsg').innerHTML=100" class="button" style="">Plot</button>
+
+    <py-script src="./main.py"></py-script>
+</body>
+
+</html>

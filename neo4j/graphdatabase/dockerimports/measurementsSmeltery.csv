@@ -1,0 +1,19 @@
+timestamp,name,current_temp_celsius
+25-03-2025-05:55:00,Cauldron Sensor,650
+25-03-2025-05:55:00,Heater Sensor,700
+25-03-2025-05:55:00,Cast Sensor,250
+25-03-2025-05:56:00,Cauldron Sensor,700
+25-03-2025-05:56:00,Heater Sensor,750
+25-03-2025-05:56:00,Cast Sensor,190
+25-03-2025-05:57:00,Cauldron Sensor,740
+25-03-2025-05:57:00,Heater Sensor,800
+25-03-2025-05:57:00,Cast Sensor,170
+25-03-2025-05:58:00,Cauldron Sensor,790
+25-03-2025-05:58:00,Heater Sensor,850
+25-03-2025-05:58:00,Cast Sensor,150
+25-03-2025-05:59:00,Cauldron Sensor,825
+25-03-2025-05:59:00,Heater Sensor,900
+25-03-2025-05:59:00,Cast Sensor,135
+25-03-2025-06:00:00,Cauldron Sensor,843
+25-03-2025-06:00:00,Heater Sensor,940
+25-03-2025-06:00:00,Cast Sensor,120

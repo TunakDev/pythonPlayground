@@ -1,0 +1,13 @@
+timestamp,name,displacement_mm,velocity_mm_per_second,acceleration_mm_per_second_squared
+25-03-2025-05:55:00,Conveyor Belt Sensor,0,6111,-12
+25-03-2025-05:55:00,Crushing Plates Sensor,510,200,100
+25-03-2025-05:56:00,Conveyor Belt Sensor,0,6098,2
+25-03-2025-05:56:00,Crushing Plates Sensor,500,190,98
+25-03-2025-05:57:00,Conveyor Belt Sensor,0,6101,4
+25-03-2025-05:57:00,Crushing Plates Sensor,504,160,90
+25-03-2025-05:58:00,Conveyor Belt Sensor,0,6120,-3
+25-03-2025-05:58:00,Crushing Plates Sensor,506,204,97
+25-03-2025-05:59:00,Conveyor Belt Sensor,0,6100,-22
+25-03-2025-05:59:00,Crushing Plates Sensor,502,215,98
+25-03-2025-06:00:00,Conveyor Belt Sensor,0,6050,0
+25-03-2025-06:00:00,Crushing Plates Sensor,505,198,87

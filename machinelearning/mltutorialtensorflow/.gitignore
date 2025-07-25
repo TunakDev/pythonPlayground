@@ -1,0 +1,3 @@
+/src/tfmodel_rgb
+/data/mushrooms.csv
+*.keras
